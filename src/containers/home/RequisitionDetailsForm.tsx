@@ -63,12 +63,12 @@ const RequisitionDetailsForm: React.FC<{
     },
   });
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => {
     handleOnChangeTitle(e.target.value as string);
     console.log(typeof handleOnChangeTitle);
     handleChange(e);
   };
-  const onChangeNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeNumber = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => {
     // handleOnChangeGender(e.target.value as string);
     // handleOnChangeUrgency(e.target.value as string);
     const numberValue = parseInt(e.target.value, 10); // Convert to integer

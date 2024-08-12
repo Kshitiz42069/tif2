@@ -7,7 +7,7 @@ export interface IFormInputProps {
   placeholder?: string;
   type?: string;
   value?: any;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   error?:
   | string

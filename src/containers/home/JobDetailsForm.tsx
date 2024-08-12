@@ -44,15 +44,15 @@ const JobDetailsForm: React.FC<{
         handleTabChange(2);
       },
     });
-    const onChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const onChangeTitle = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => {
       handleOnChangeJobTitle(e.target.value as string);
       handleChange(e);
     };
-    const onChangeDetails = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const onChangeDetails = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => {
       handleOnChangeJobDetails(e.target.value as string);
       handleChange(e);
     };
-    const onChangeLocation = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const onChangeLocation = (e: React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLSelectElement>) => {
       handleOnChangeJobLocation(e.target.value as string);
       handleChange(e);
     };
@@ -69,7 +69,7 @@ const JobDetailsForm: React.FC<{
           name="jobTitle"
           onChange={onChangeTitle}
           onBlur={handleBlur}
-          value={jobDetails || values?.jobTitle}
+          value={jobTitle || values?.jobTitle}
           error={errors?.jobTitle}
           touched={touched?.jobTitle}
         />
